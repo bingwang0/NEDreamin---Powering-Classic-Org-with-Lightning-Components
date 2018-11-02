@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens">
+    <aura:attribute name="title" type="String"/>
+    <aura:attribute name="selection" type="Boolean" default="0"/>
+    <aura:attribute name="selectionBlue" type="Boolean" default="0"/>
+    <aura:attribute name="selectionGreen" type="Boolean" default="0"/>
+    <h1 class="slds-text-heading_medium">{!v.title}</h1>
+    <form>
+        <fieldset>
+            <h1 class="slds-m-bottom_large">Select your favored colors:</h1>
+            <lightning:input type="toggle" label="Red" 
+              name="colorRed" aura:id="colorRed" onchange="{!c.handleChange}" messageToggleActive="Yes!"
+              messageToggleInactive="No" class="redInput"/>
+            <lightning:input type="toggle" label="Blue" 
+              name="colorBlue" aura:id="colorBlue" onchange="{!c.handleChange}" messageToggleActive="Yes!"
+              messageToggleInactive="No" class="blueInput"/>
+            <lightning:input type="toggle" label="Green" 
+              name="colorGreen" aura:id="colorGreen" onchange="{!c.handleChange}" messageToggleActive="Yes!"
+              messageToggleInactive="No" class="greenInput"/>
+        </fieldset>
+      
+    </form>
+</aura:component>	

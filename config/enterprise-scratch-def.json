@@ -1,0 +1,9 @@
+{
+    "orgName": "bingwang Company",
+    "edition": "Enterprise",
+    "features": ["Communities", "ServiceCloud"],
+    "orgPreferences" : {
+        "enabled": ["S1DesktopEnabled"],
+        "disabled": ["S1EncryptedStoragePref2"]
+    }
+}

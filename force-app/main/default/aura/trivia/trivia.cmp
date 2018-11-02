@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:availableForChatterExtensionComposer,lightning:availableForChatterExtensionRenderer">
+
+        <aura:attribute type="String" name="recordId"/>
+        <aura:attribute type="String" name="layout"/>
+        <aura:attribute type="String" name="fieldsToQuery"/>
+        <aura:attribute type="Object" name="record"/>
+        <aura:attribute type="Object" name="simpleRecord"/>
+        <aura:attribute type="String" name="error"/>
+    
+        <force:recordData aura:id="forceRecordCmp"
+            recordId="{!v.recordId}"
+            layoutType="{!v.layout}"
+            fields="{!v.fieldsToQuery}"
+            mode="VIEW"
+            targetRecord="{!v.record}"
+            targetFields="{!v.simpleRecord}"
+            targetError="{!v.error}" /> 
+    <div class="slds-box slds-theme_default">
+        What is the capital of 
+        <lightning:outputField fieldName="CName" />
+    </div>
+</aura:component>	

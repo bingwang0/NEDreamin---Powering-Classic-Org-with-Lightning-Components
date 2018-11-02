@@ -1,0 +1,16 @@
+<apex:page>
+        <apex:includeLightning />
+
+        <div id="lightning" />
+
+        <script>
+            $Lightning.use("c:lightningTriviaApp", function() {
+              $Lightning.createComponent("c:triviaLocal",
+              { label : "Press Me!" },
+              "lightning",
+              function(cmp) {
+                // do some stuff
+              });
+            });
+        </script>
+</apex:page>

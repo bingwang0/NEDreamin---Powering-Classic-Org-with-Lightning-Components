@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction">
+    <aura:attribute type="Object" name="kb"/> <!-- all pairs -->
+    <aura:attribute type="Object" name="know"/>
+    <aura:attribute type="Object" name="question"/>
+    <aura:attribute type="String" name="answer"/>
+
+    <aura:handler action="{!c.init}" name="init" value="{!this}"/>
+
+    <lightning:card title="Do you know the capital?" class="slds-p-left_medium slds-p-right_medium">
+        Country: {!v.question.country}
+
+        <lightning:input type="text" label="Answer:" value="{!v.answer}" class="slds-m-bottom_medium"/>
+        <lightning:button title="Submit Answer" onclick="{!c.submit}" label="Submit"/>
+
+        <lightning:button title="Next question" onclick="{!c.refresh}" label="Refresh"/>
+    </lightning:card>
+</aura:component>	

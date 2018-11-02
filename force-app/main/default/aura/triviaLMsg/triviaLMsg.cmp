@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction">
+    <aura:attribute type="Object" name="kb"/> <!-- all pairs -->
+    <aura:attribute type="Object" name="know"/>
+    <aura:attribute type="Object" name="question"/>
+    <aura:attribute type="String" name="answer"/>
+    <aura:attribute type="String" name="popupMsg"/>
+    <aura:attribute type="Boolean" name="showPopup"/> 
+
+    <aura:handler action="{!c.init}" name="init" value="{!this}"/>
+
+    <lightning:card title="Do you know the capital?" class="slds-p-left_medium slds-p-right_medium">
+        Country: {!v.question.country}
+
+        <lightning:input type="text" label="Answer:" value="{!v.answer}" class="slds-m-bottom_medium"/>
+        <lightning:button title="Submit Answer" onclick="{!c.submit}" label="Submit"/>
+
+        <lightning:button title="Next question" onclick="{!c.refresh}" label="Refresh"/>
+    </lightning:card>
+
+    <aura:if isTrue="{!v.showPopup}">
+            
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.popupMsg}</h2>
+                </header>
+
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        
+    </aura:if>
+</aura:component>	

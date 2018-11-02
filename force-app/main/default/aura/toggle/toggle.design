@@ -1,0 +1,6 @@
+<design:component >
+    <design:attribute name="title" label="Title" default="Please select one:"/>
+    <design:attribute name="selection" label="Red selection" />
+    <design:attribute name="selectionBlue" label="Blue selection" />
+    <design:attribute name="selectionGreen" label="Green selection" />    
+</design:component>

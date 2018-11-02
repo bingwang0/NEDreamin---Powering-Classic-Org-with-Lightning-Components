@@ -1,0 +1,3 @@
+deploying source without namespace (flow referencing lightning component) to an org with namespace ended up with this PROBLEM message:
+
+togglebutton (Screen Field) - We can't find an extension called "c:toggle"

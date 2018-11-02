@@ -1,0 +1,19 @@
+{
+    "orgName": "bingwang Company",
+    "edition": "Enterprise",
+    "features": ["Communities", "ServiceCloud","Chatbot"],
+    "settings": {
+        "orgPreferenceSettings": {
+            "networksEnabled": true,
+            "s1DesktopEnabled": true,
+            "s1EncryptedStoragePref2": false
+        },
+        "omniChannelSettings": {
+            "enableOmniChannel": true
+        },
+  
+        "caseSettings": {
+            "systemUserEmail": "support@acme.com"
+        }
+    }
+}
