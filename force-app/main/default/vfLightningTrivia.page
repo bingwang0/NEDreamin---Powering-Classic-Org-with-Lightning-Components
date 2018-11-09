@@ -6,7 +6,7 @@
         <script>
             $Lightning.use("c:lightningTriviaApp", function() {
               $Lightning.createComponent("c:triviaLocal",
-              { label : "Press Me!" },
+              { label : "Trivia!" },
               "lightning",
               function(cmp) {
                 // do some stuff

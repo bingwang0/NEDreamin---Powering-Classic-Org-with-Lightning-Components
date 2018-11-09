@@ -1,7 +1,7 @@
 ({
     init : function(component, event, helper) {
-        var countries = ["Egypt","Sudan","Algeria","Namibia","Keyna"];
-        var capitals =["Cairo","Khartoum","Algiers","Windhoek","Nairobi"];
+        var countries = ["Egypt","Sudan","Algeria","Namibia","Keyna","Nigeria","Ethiopia"];
+        var capitals =["Cairo","Khartoum","Algiers","Windhoek","Nairobi","Abuja","Addis Ababa"];
         var ksize = countries.length;
         var knowledge=[];
         for (var i=0; i<=ksize-1; i++){
